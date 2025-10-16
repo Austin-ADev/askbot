@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>iPhone Xr Chatbot Pitch</title>
+  <style>
+    body { font-family: sans-serif; background: #111; color: #eee; padding: 20px; }
+    .chatbox { max-width: 600px; margin: auto; background: #222; padding: 20px; border-radius: 10px; }
+    .bot, .user { margin: 10px 0; }
+    .bot { color: #0ff; }
+    .user { color: #0f0; }
+    button { padding: 10px 20px; margin: 5px; background: #0ff; border: none; border-radius: 5px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div class="chatbox" id="chat"></div>
+
+  <script>
+    let chatFlow = {};
+    let currentId = "start";
+    let finalResponse = "";
+
+    fetch("chatflow.json")
+      .then(response => response.json())
+      .then(data => {
+        chatFlow = Object.fromEntries(data.map(item => [item.id, item]));
+        showMessage(currentId);
+      });
+
+    function showMessage(id) {
+      const node = chatFlow[id];
+      const chat = document.getElementById("chat");
+      chat.innerHTML += `<div class="bot">Bot: ${node.bot}</div>`;
+      node.options.forEach(option => {
+        const btn = document.createElement("button");
+        btn.textContent = option;
+        btn.onclick = () => {
+          chat.innerHTML += `<div class="user">You clicked: ${option}</div>`;
+          finalResponse = option;
+          if (chatFlow[option]) {
+            showMessage(option);
+          } else {
+            chat.innerHTML += `<div class="bot">Bot: Thanks for your response.</div>`;
+            localStorage.setItem("xr_final_response", finalResponse);
+          }
+        };
+        chat.appendChild(btn);
+      });
+    }
+  </script>
+</body>
+</html>
