@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>XR Response Log</title>
+  <style>
+    body { font-family: sans-serif; background: #111; color: #eee; padding: 20px; }
+    .logbox { max-width: 600px; margin: auto; background: #222; padding: 20px; border-radius: 10px; }
+    h1 { color: #0ff; }
+    p { font-size: 18px; color: #0f0; }
+  </style>
+</head>
+<body>
+  <div class="logbox">
+    <h1>Final Response Logged</h1>
+    <p id="response"></p>
+  </div>
+
+  <script>
+    const response = localStorage.getItem("xr_final_response");
+    document.getElementById("response").textContent = response ? response : "No response logged yet.";
+  </script>
+</body>
+</html>
