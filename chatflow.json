@@ -1,0 +1,83 @@
+
+[
+  {
+    "id": "start",
+    "bot": "Hey Dad...",
+    "options": ["yeah?", "go away", "what?"]
+  },
+  {
+    "id": "yeah?",
+    "bot": "You know your blue phone that broke? Can I take it apart and look inside?",
+    "options": ["Sure", "Why?", "Not now"]
+  },
+  {
+    "id": "go away",
+    "bot": "You know your blue phone that broke? Can I take it apart and look inside?",
+    "options": ["Why?", "No.", "Maybe."]
+  },
+  {
+    "id": "what?",
+    "bot": "You know your blue phone that broke? Can I take it apart and look inside?",
+    "options": ["Sure", "Why?", "Not now"]
+  },
+  {
+    "id": "Why?",
+    "bot": "Because it’s broken and just sitting there. I’m not trying to use it—I just want to explore how it’s built. If I learn something or it happens to work, that’s a bonus.",
+    "options": ["Okay", "Still no", "Maybe later"]
+  },
+  {
+    "id": "Okay",
+    "bot": "Awesome! I’ll be careful. I’ve learned a lot since I took apart the old iPhone X. I know what not to touch now.",
+    "options": []
+  },
+  {
+    "id": "Still no",
+    "bot": "Understood. I’ll keep learning with other devices. Thanks for hearing me out.",
+    "options": []
+  },
+  {
+    "id": "Maybe later",
+    "bot": "Sounds good. I’ll wait until the time’s right.",
+    "options": []
+  },
+  {
+    "id": "Sure",
+    "bot": "Thanks! I’m just taking it apart to explore. I’m not trying to use it—I just want to learn.",
+    "options": []
+  },
+  {
+    "id": "No.",
+    "bot": "Got it. Just thought I’d ask since it’s been sitting unused. Thanks anyway.",
+    "options": []
+  },
+  {
+    "id": "Maybe.",
+    "bot": "No rush. Just wanted to try exploring it if it’s truly unused.",
+    "options": []
+  },
+  {
+    "id": "Not now",
+    "bot": "Okay. I’ll ask again later if it’s still sitting around.",
+    "options": []
+  },
+  {
+    "id": "extra1",
+    "bot": "If your current phone breaks, the Xr won’t help—it’s stuck on old iOS like the 7.",
+    "options": []
+  },
+  {
+    "id": "extra2",
+    "bot": "It’s just sitting there. If it’s never going to be used again, why not let me try?",
+    "options": []
+  },
+  {
+    "id": "extra3",
+    "bot": "I’m not asking for a gift—I’m asking for permission to explore. If it works, great. If not, I still learn.",
+    "options": []
+  },
+  {
+    "id": "extra4",
+    "bot": "You let me take apart the iPhone X when it was broken. I’m asking for that same trust again.",
+    "options": []
+  }
+]
